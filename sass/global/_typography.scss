@@ -1,0 +1,83 @@
+/* typography */
+@use "sass:math";
+
+$font-01: 'Hind',
+sans-serif;
+
+$font-02:'Oxygen',
+sans-serif;
+
+$font-03:'Ubuntu',
+sans-serif;
+
+@function rem($pixel, $context: 16) {
+   @return math.div($pixel, $context)+rem;
+}
+
+@mixin typography-01($size) {
+   font-family: $font-01, sans-serif;
+
+   @if($size==12) {
+      font-size  : rem(12);
+      line-height: rem(12);
+   }
+
+   @else if($size==14) {
+      font-size  : rem(14);
+      line-height: rem(14);
+   }
+
+   @else if($size==16) {
+      font-size  : rem(16);
+      line-height: rem(24);
+   }
+
+   @else if($size==18) {
+      font-size  : rem(18);
+      line-height: rem(30);
+   }
+
+   @else if($size==36) {
+      font-size  : rem(36);
+      line-height: rem(50);
+   }
+
+   @else if($size==60) {
+      font-size  : rem(60);
+      line-height: rem(75);
+   }
+}
+
+@mixin typography-02($size) {
+   font-family: $font-02, sans-serif;
+
+   @if($size==17) {
+      font-size  : rem(17);
+      line-height: rem(28);
+   }
+
+   @else if($size==20) {
+      font-size  : rem(20);
+      line-height: rem(32);
+   }
+
+   @else if($size==44) {
+      font-size  : rem(44);
+      line-height: rem(58);
+   }
+}
+
+@mixin typography-03($size) {
+   font-family: $font-03, sans-serif;
+
+   @if($size==16) {
+      font-size  : rem(16);
+      line-height: rem(26);
+   }
+
+   @else if($size==24) {
+      font-size  : rem(24);
+      line-height: rem(38);
+   }
+
+}
