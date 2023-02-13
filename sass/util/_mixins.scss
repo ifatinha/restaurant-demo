@@ -1,0 +1,8 @@
+@mixin display($propertie) {
+   display:#{$propertie};
+}
+
+@mixin flex-properties($align-items, $justify-content) {
+   align-items    : #{$align-items};
+   justify-content: #{$justify-content};
+}

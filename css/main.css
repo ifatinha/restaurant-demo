@@ -100,10 +100,60 @@ th {
   padding: 0;
 }
 
+/* medias querys */
+/* mixins */
 /* colors palette */
 /*
 background: linear-gradient(45deg, rgba(48,43,40,1) 0%, rgba(37,34,33,1) 100%);
 */
-/* typography */ /* header */ /* medias querys */
+/* typography */
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* pages */
+.header {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 30px 2%;
+  position: absolute;
+  width: 100%;
+}
+
+.header-container {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-desktop {
+  flex-wrap: wrap;
+  gap: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-desktop a {
+  color: #ffffff;
+  font-weight: 500;
+  padding: 10px;
+  transition: 0.3s all ease-in-out;
+  display: inline-block;
+  font-family: "Hind", sans-serif, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.nav-desktop a:hover {
+  opacity: 0.7;
+}
+
+.home-container {
+  background: url("./../../images/home-bg.jpg") no-repeat center;
+  background-size: cover;
+  min-height: 100%;
+  width: 100%;
+}
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,35 @@
+.header {
+   background-color: $black-opacity;
+   padding         : 30px 2%;
+   position        : absolute;
+   width           : 100%;
+}
+
+.header-container {
+   flex-wrap: wrap;
+   @include display(flex);
+   @include flex-properties(center, space-between);
+}
+
+.nav-desktop {
+   flex-wrap: wrap;
+   gap      : 40px;
+
+   @include display(flex);
+   @include flex-properties(center, space-between);
+
+   a {
+      color      : $white;
+      font-weight: 500;
+      padding    : 10px;
+      transition : .3s all ease-in-out;
+
+      @include display(inline-block);
+      @include typography-01(16);
+
+      &:hover {
+         opacity: 0.7;
+      }
+
+   }
+}
