@@ -1,19 +1,19 @@
 .header {
-   background-color: $black-opacity;
-   padding         : 30px 2%;
+   background-color: $theme-header_bg;
    position        : absolute;
    width           : 100%;
 }
 
 .header-container {
    flex-wrap: wrap;
+   padding  : 30px 0;
    @include display(flex);
    @include flex-properties(center, space-between);
 }
 
 .nav-desktop {
    flex-wrap: wrap;
-   gap      : 40px;
+   gap      : 20px;
 
    @include display(flex);
    @include flex-properties(center, space-between);
@@ -27,9 +27,16 @@
       @include display(inline-block);
       @include typography-01(16);
 
-      &:hover {
-         opacity: 0.7;
+      &:hover:not(a.btn-navBar) {
+         opacity: 0.5;
       }
+   }
 
+   @include devices(t) {
+      @include display(none);
+   }
+
+   @include devices(m) {
+      @include display(none);
    }
 }
