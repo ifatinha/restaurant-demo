@@ -1,5 +1,5 @@
 .header {
-   background-color: $theme-header_bg;
+   background-color: $theme-header_bg-color;
    position        : absolute;
    width           : 100%;
 }
@@ -9,6 +9,10 @@
    padding  : 30px 0;
    @include display(flex);
    @include flex-properties(center, space-between);
+
+   @include devices(m) {
+      justify-content: space-around;
+   }
 }
 
 .nav-desktop {
@@ -19,7 +23,7 @@
    @include flex-properties(center, space-between);
 
    a {
-      color      : $white;
+      color      : $second-color;
       font-weight: 500;
       padding    : 10px;
       transition : .3s all ease-in-out;
@@ -33,10 +37,53 @@
    }
 
    @include devices(t) {
-      @include display(none);
+      display: none;
    }
 
    @include devices(m) {
-      @include display(none);
+      display: none;
+   }
+}
+
+.nav-mobile {
+   background     : url("./../../images/menu-mobile.png") no-repeat center;
+   background-size: cover;
+   cursor         : pointer;
+   height         : 50px;
+   transition     : .3s all ease-in-out;
+   width          : 50px;
+
+   @include devices(l) {
+      display: none;
+   }
+
+   @include devices(t) {
+      &:hover .nav-mobile_itens {
+         display: block;
+      }
+   }
+
+   @include devices(m) {
+      &:hover .nav-mobile_itens {
+         display: block;
+      }
+   }
+}
+
+.nav-mobile_itens {
+   background-color: $second-color;
+   display         : none;
+   left            : 0;
+   position        : absolute;
+   top             : 80px;
+   width           : 100%;
+
+   li {
+      padding: 10px 0 10px 20px;
+      width  : 100%;
+   }
+
+   a {
+      @include typography-01(16);
    }
 }

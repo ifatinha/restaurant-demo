@@ -1,1 +1,221 @@
-html{scroll-behavior:smooth}body{font-family:"Hind",sans-serif}html,body{height:100%;width:100%}textarea{resize:none}a{color:inherit;text-decoration:none}/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}.container{margin:0 auto;max-width:1160px;width:100%}.header{background-color:rgba(0,0,0,.4);position:absolute;width:100%}.header-container{flex-wrap:wrap;padding:30px 0;display:flex;align-items:center;justify-content:space-between}.nav-desktop{flex-wrap:wrap;gap:20px;display:flex;align-items:center;justify-content:space-between}.nav-desktop a{color:#fff;font-weight:500;padding:10px;transition:.3s all ease-in-out;display:inline-block;font-family:"Hind",sans-serif,sans-serif;font-size:1rem;line-height:1.5rem}.nav-desktop a:hover:not(a.btn-navBar){opacity:.5}@media screen and (min-width: 768px)and (max-width: 1023px){.nav-desktop{display:none}}@media screen and (max-width: 767px){.nav-desktop{display:none}}.home-container{background:url("./../../images/home-bg.jpg") no-repeat center;background-size:cover;min-height:100%;width:100%}/*# sourceMappingURL=main.css.map */
+/* css base */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Hind", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/* medias querys */
+/* mixins */
+/* colors palette */
+/*
+cardapio background-color
+background: linear-gradient(45deg, rgba(48,43,40,1) 0%, rgba(37,34,33,1) 100%);
+*/
+/* typography */
+.container {
+  margin: 0 auto;
+  max-width: 1160px;
+  width: 100%;
+}
+
+.linkAtivo {
+  opacity: 0.6;
+}
+
+/* pages */
+.header {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  width: 100%;
+}
+
+.header-container {
+  flex-wrap: wrap;
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 767px) {
+  .header-container {
+    justify-content: space-around;
+  }
+}
+
+.nav-desktop {
+  flex-wrap: wrap;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-desktop a {
+  color: #ffffff;
+  font-weight: 500;
+  padding: 10px;
+  transition: 0.3s all ease-in-out;
+  display: inline-block;
+  font-family: "Hind", sans-serif, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.nav-desktop a:hover:not(a.btn-navBar) {
+  opacity: 0.5;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .nav-desktop {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .nav-desktop {
+    display: none;
+  }
+}
+
+.nav-mobile {
+  background: url("./../../images/menu-mobile.png") no-repeat center;
+  background-size: cover;
+  cursor: pointer;
+  height: 50px;
+  transition: 0.3s all ease-in-out;
+  width: 50px;
+}
+@media screen and (min-width: 1024px) {
+  .nav-mobile {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .nav-mobile:hover .nav-mobile_itens {
+    display: block;
+  }
+}
+@media screen and (max-width: 767px) {
+  .nav-mobile:hover .nav-mobile_itens {
+    display: block;
+  }
+}
+
+.nav-mobile_itens {
+  background-color: #ffffff;
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 80px;
+  width: 100%;
+}
+.nav-mobile_itens li {
+  padding: 10px 0 10px 20px;
+  width: 100%;
+}
+.nav-mobile_itens a {
+  font-family: "Hind", sans-serif, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.home-container {
+  background: url("./../../images/home-bg.jpg") no-repeat center;
+  background-size: cover;
+  min-height: 100%;
+  width: 100%;
+}
+
+/*# sourceMappingURL=main.css.map */
