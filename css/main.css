@@ -121,6 +121,7 @@ background: linear-gradient(45deg, rgba(48,43,40,1) 0%, rgba(37,34,33,1) 100%);
 /* pages */
 .header {
   background-color: rgba(0, 0, 0, 0.4);
+  padding: 0 2%;
   position: absolute;
   width: 100%;
 }
@@ -131,11 +132,6 @@ background: linear-gradient(45deg, rgba(48,43,40,1) 0%, rgba(37,34,33,1) 100%);
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-@media screen and (max-width: 767px) {
-  .header-container {
-    justify-content: space-around;
-  }
 }
 
 .nav-desktop {
@@ -211,11 +207,51 @@ background: linear-gradient(45deg, rgba(48,43,40,1) 0%, rgba(37,34,33,1) 100%);
   line-height: 1.5rem;
 }
 
-.home-container {
+.home {
+  align-items: center;
   background: url("./../../images/home-bg.jpg") no-repeat center;
   background-size: cover;
   min-height: 100%;
+  padding: 0 4%;
   width: 100%;
+  display: flex;
+}
+
+.home-container {
+  width: 100%;
+}
+
+.home-description {
+  color: #ffffff;
+  max-width: 620px;
+  width: 100%;
+}
+.home-description h1 {
+  font-weight: 300;
+  margin-bottom: 20px;
+  font-family: "Hind", sans-serif, sans-serif;
+  font-size: 3.75rem;
+  line-height: 4.6875rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .home-description h1 {
+    font-family: "Hind", sans-serif, sans-serif;
+    font-size: 2.25rem;
+    line-height: 3.125rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .home-description h1 {
+    font-family: "Hind", sans-serif, sans-serif;
+    font-size: 2.25rem;
+    line-height: 3.125rem;
+  }
+}
+.home-description p {
+  margin-bottom: 20px;
+  font-family: "Oxygen", sans-serif, sans-serif;
+  font-size: 1.25rem;
+  line-height: 2rem;
 }
 
 /*# sourceMappingURL=main.css.map */
