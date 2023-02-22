@@ -1,0 +1,26 @@
+.section {
+   padding: 90px 2%;
+
+   &-container {
+      align-items   : center;
+      flex-direction: column;
+      @include display(flex);
+   }
+}
+
+.section-description {
+   margin-bottom: 40px;
+   text-align   : center;
+
+   &_title {
+      color         : $primary-color;
+      font-weight   : 300;
+      letter-spacing: -0.288px;
+      @include typography-01(36);
+   }
+
+   &_paragraph {
+      color: $theme-texts_color;
+      @include typography-03(17);
+   }
+}

@@ -75,13 +75,13 @@ sans-serif;
       line-height: rem(13);
    }
 
-   @else if($size==16) {
-      font-size  : rem(16);
-      line-height: rem(26);
+   @else if($size==17) {
+      font-size  : rem(17);
+      line-height: rem(28);
    }
 
    @else if($size==24) {
       font-size  : rem(24);
-      line-height: rem(38);
+      line-height: rem(36);
    }
 }

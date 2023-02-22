@@ -21,6 +21,16 @@
       }
    }
 
+   &-black_shadow {
+      background-color: $black;
+      color           : $second-color;
+      @extend %default-button;
+
+      &:hover {
+         box-shadow: 0 11px 18px -5px rgb(0 0 0 / 37%);
+      }
+   }
+
    &-icon {
       margin-right: 6px;
    }
