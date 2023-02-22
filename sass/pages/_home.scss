@@ -8,3 +8,79 @@
       @include display(flex);
    }
 }
+
+.home-about {
+   padding: 120px 2%;
+   width  : 100%;
+}
+
+.home-about_row {
+   align-items: center;
+   flex-wrap  : wrap;
+   @include display(flex);
+
+   &:first-child {
+      margin-bottom: 80px;
+   }
+}
+
+.home-about_img {
+   flex-basis: 60%;
+   padding   : 0 25px;
+
+   img {
+      border-radius: 8px;
+   }
+
+   @include devices(t) {
+      flex-basis: 50%;
+   }
+
+   @include devices(m) {
+      flex-basis: 100%;
+   }
+}
+
+.home-about_texts {
+   align-items   : flex-start;
+   flex-basis    : 40%;
+   flex-direction: column;
+   gap           : 20px;
+   padding       : 0 25px;
+   @include display(flex);
+
+   @include devices(t) {
+      flex-basis: 50%;
+   }
+
+   @include devices(m) {
+      flex-basis: 100%;
+   }
+
+   h2 {
+      color         : $primary-color;
+      font-weight   : 300;
+      letter-spacing: -0.2;
+      @include typography-01(36);
+   }
+
+   p {
+      color: $theme-texts_color;
+      @include typography-02(17);
+
+      span {
+         color      : $primary-color;
+         font-weight: 600;
+      }
+   }
+}
+
+.home-about_time {
+   gap: 10px;
+   @include display(flex);
+
+   i {
+      font-size  : 27px;
+      padding-top: 6px;
+   }
+}

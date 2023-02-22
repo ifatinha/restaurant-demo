@@ -137,6 +137,7 @@ background: linear-gradient(45deg, rgba(48,43,40,1) 0%, rgba(37,34,33,1) 100%);
 }
 .btn-black {
   background-color: #000000;
+  color: #ffffff;
 }
 .btn-black:hover {
   background-color: #ffffff;
@@ -315,6 +316,84 @@ background: linear-gradient(45deg, rgba(48,43,40,1) 0%, rgba(37,34,33,1) 100%);
   flex-wrap: wrap;
   gap: 10px;
   display: flex;
+}
+
+.home-about {
+  padding: 120px 2%;
+  width: 100%;
+}
+
+.home-about_row {
+  align-items: center;
+  flex-wrap: wrap;
+  display: flex;
+}
+.home-about_row:first-child {
+  margin-bottom: 80px;
+}
+
+.home-about_img {
+  flex-basis: 60%;
+  padding: 0 25px;
+}
+.home-about_img img {
+  border-radius: 8px;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .home-about_img {
+    flex-basis: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .home-about_img {
+    flex-basis: 100%;
+  }
+}
+
+.home-about_texts {
+  align-items: flex-start;
+  flex-basis: 40%;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 25px;
+  display: flex;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .home-about_texts {
+    flex-basis: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .home-about_texts {
+    flex-basis: 100%;
+  }
+}
+.home-about_texts h2 {
+  color: #3e4249;
+  font-weight: 300;
+  letter-spacing: -0.2;
+  font-family: "Hind", sans-serif, sans-serif;
+  font-size: 2.25rem;
+  line-height: 3.125rem;
+}
+.home-about_texts p {
+  color: #848991;
+  font-family: "Oxygen", sans-serif, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.75rem;
+}
+.home-about_texts p span {
+  color: #3e4249;
+  font-weight: 600;
+}
+
+.home-about_time {
+  gap: 10px;
+  display: flex;
+}
+.home-about_time i {
+  font-size: 27px;
+  padding-top: 6px;
 }
 
 /*# sourceMappingURL=main.css.map */

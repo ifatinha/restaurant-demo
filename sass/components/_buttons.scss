@@ -12,6 +12,7 @@
 
    &-black {
       background-color: $black;
+      color           : $second-color;
       @extend %default-button;
 
       &:hover {
