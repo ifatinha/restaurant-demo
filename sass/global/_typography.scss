@@ -1,4 +1,4 @@
-/* typography */
+// typography
 @use "sass:math";
 
 $font-01: 'Hind',
@@ -70,7 +70,12 @@ sans-serif;
 @mixin typography-03($size) {
    font-family: $font-03, sans-serif;
 
-   @if($size==16) {
+   @if($size==13) {
+      font-size  : rem(13);
+      line-height: rem(13);
+   }
+
+   @else if($size==16) {
       font-size  : rem(16);
       line-height: rem(26);
    }

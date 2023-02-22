@@ -1,0 +1,26 @@
+.btn {
+   &-white {
+      background-color: $second-color;
+      color           : $theme-link_color;
+      @extend %default-button;
+
+      &:hover {
+         background-color: $black;
+         color           : $second-color;
+      }
+   }
+
+   &-black {
+      background-color: $black;
+      @extend %default-button;
+
+      &:hover {
+         background-color: $second-color;
+         color           : $black;
+      }
+   }
+
+   &-icon {
+      margin-right: 6px;
+   }
+}

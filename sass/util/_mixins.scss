@@ -1,8 +1,25 @@
 @mixin display($propertie) {
-   display:#{$propertie};
+   display: $propertie;
 }
 
 @mixin flex-properties($align-items, $justify-content) {
-   align-items    : #{$align-items};
-   justify-content: #{$justify-content};
+   align-items    : $align-items;
+   justify-content: $justify-content;
+}
+
+@mixin section-bg($url-image) {
+   background: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 100%),
+      url($url-image);
+   background-position: center;
+   background-repeat  : repeat;
+   background-size    : cover;
+}
+
+@mixin prefix($property, $value, $prefixes: webkit moz ms o) {
+
+   @each $prefix in $prefixes {
+      -#{$prefix}-#{$property}: $value;
+   }
+
+   #{$property}: $value;
 }

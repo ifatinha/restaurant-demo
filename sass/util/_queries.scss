@@ -3,6 +3,7 @@ $l-device: 1024px;
 $t-device: 768px;
 $s-device: 460px;
 
+///mixins para media-queries
 @mixin devices($size) {
    @if($size==l) {
       @media screen and (min-width: #{$l-device}) {
