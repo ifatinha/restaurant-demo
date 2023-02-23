@@ -211,7 +211,7 @@ background: linear-gradient(45deg, rgba(48,43,40,1) 0%, rgba(37,34,33,1) 100%);
   align-items: center;
   background: url("./../../images/home-bg.jpg") no-repeat center;
   background-size: cover;
-  min-height: 100%;
+  min-height: 90%;
   padding: 0 4%;
   width: 100%;
   display: flex;
