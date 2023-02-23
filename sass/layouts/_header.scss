@@ -20,13 +20,15 @@
    @include flex-properties(center, space-between);
 
    a {
-      color      : $second-color;
-      font-weight: 500;
-      padding    : 10px;
-      transition : .3s all ease-in-out;
+      &:not(&.btn-navBar) {
+         color      : $second-color;
+         font-weight: 500;
+         padding    : 10px;
+         transition : .3s all ease-in-out;
 
-      @include display(inline-block);
-      @include typography-01(16);
+         @include display(inline-block);
+         @include typography-01(16);
+      }
 
       &:hover:not(a.btn-navBar) {
          opacity: 0.5;

@@ -5,15 +5,16 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Project developed with the objective of practicing html, css, and sass.">
+   <meta name="author" content="Fatima Ferreira">
+   <meta name="copyright" content="Mit License Github">
+   <meta name="robots" content="index, follow">
 
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link
-      href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Oxygen:wght@300;400&family=Ubuntu:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Oxygen:wght@400;700&family=Ubuntu:wght@400;500;700&display=swap"
       rel="stylesheet">
-
-   <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
    <link rel="preconnect" href="./css/main.css">
@@ -46,28 +47,220 @@
                <li><a href="./pages/menu.html">Menu</a></li>
                <li><a href="./pages/contact.html">Contact</a></li>
                <li><a href="./pages/blog.html">Blog</a></li>
-               <li><a href="./pages/book.html" class="btn-white btn-navBar">Book a table</a></li>
+               <li><a href="./pages/book.html">Book a table</a></li>
             </ul>
          </nav>
       </div>
    </header>
 
-   <main class="home">
-      <div class="container home-container">
-         <div class="home-description">
+   <main class="main-section home">
+      <div class="container main-section_container">
+         <div class="main-section_description">
             <h1>Food that tastes freaking good!!!</h1>
             <p>We are a family run bistro, located in Collins Street, Melbourne CBD. We have been serving authentic and
                delicious food for the last 2 decades.
             </p>
             <div class="home-buttons">
-               <a href="./" class="btn-white">Booka a table</a>
-               <a href="tel:+18001234567" class="btn-black">1800-123-4567</a>
+               <a href="./" class="btn-white">Book a table</a>
+               <a href="tel:+18001234567" class="btn-black">
+                  <i class="fa-sharp fa-solid fa-phone btn-icon"></i>1800-123-4567
+               </a>
             </div>
          </div>
       </div>
    </main>
 
+   <section class="home-about">
+      <div class="container">
+         <div class="home-about_row">
+            <div class="home-about_img">
+               <img src="./images/home-bg-5.jpg" alt="Restaurant Interior">
+            </div>
+            <div class="home-about_texts">
+               <h2>Great ambience and delicious food</h2>
+               <p class="section-paragraph">We opened doors in the year 1998 with a motive of serving authentic food and
+                  over the years we have
+                  been rated as the best bistro in Melbourne.</p>
+               <div class="home-about_time">
+                  <i class="fa-regular fa-clock"></i>
+                  <div>
+                     <p class="section-paragraph"><span>Monday – Thursday</span> : 8AM to 9PM</p>
+                     <p class="section-paragraph"><span>Friday – Sunday</span> : 8AM to Midnight</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="home-about_row">
+            <div class="home-about_texts">
+               <h2 class="section-title">We are so passionate, we breathe food</h2>
+               <p class="section-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis maiores
+                  voluptate exercitationem
+                  earum laboriosam veniam cum, quia fugiat minus deserunt.</p>
+               <a href="./pages/about.html" class="btn-black_shadow">About us</a>
+            </div>
+            <div class="home-about_img">
+               <img src="./images/home-bg-4.jpg" alt="Chef">
+            </div>
+         </div>
+   </section>
+
+   <section class="section home-special">
+      <div class="container section-container">
+         <div class="section-description">
+            <h2 class="section-description_title">Our Special</h2>
+            <p class="section-description_paragraph">All the stuff you need and none that you don’t, makes this a must
+               have app.</p>
+         </div>
+         <div class="home-special_dishes">
+            <div class="dish-card">
+               <img src="./images/special-01.jpg" alt="Banco and Eggs" title="Bancon & Eggs">
+               <h3>Bacon & Eggs</h3>
+               <span>bread, bacon, eggs, lettuce, signature sauce</span>
+            </div>
+            <div class="dish-card">
+               <img src="./images/special-02.jpg" alt="Whopper Burger" title="Whopper Burger">
+               <h3>Whopper Burger</h3>
+               <span>Burger, patty, onion, lettuce, sauce and fries</span>
+            </div>
+            <div class="dish-card">
+               <img src="./images/special-03.jpg" alt="Wood fried pizza" title="Wood fried pizza">
+               <h3>Wood fried pizza</h3>
+               <span>Olives, peppers, onion, tomatoes, goat cheese</span>
+            </div>
+            <div class="dish-card">
+               <img src="./images/special-04.jpg" alt="Gnocchi Pasta" title="Gnocchi Pasta">
+               <h3>Gnocchi Pasta</h3>
+               <span>Pasta, cheese, olive oil, pine nuts, basil</span>
+            </div>
+            <div class="dish-card">
+               <img src="./images/special-05.jpg" alt="Roasted Beef" title="Roasted Beef">
+               <h3>Roasted Beef</h3>
+               <span>Beef, chilli, vinegar, peppers, seasoning</span>
+            </div>
+            <div class="dish-card">
+               <img src="./images/special-06.jpg" alt="Chocolate Cake" title="Chocolate Cake">
+               <h3>Chocolate lava cake</h3>
+               <span>Chocolate, mixed nuts, cake</span>
+            </div>
+         </div>
+         <a href="./pages/menu.html" class="btn-black_shadow">Full Menu</a>
+      </div>
+   </section>
+
+   <section class="section home-gallery">
+      <div class="container section-container">
+         <div class="section-description">
+            <h2 class="section-description_title">Gallery</h2>
+            <p class="section-description_paragraph">All the stuff you need and none that you don’t, makes this a must
+               have app.</p>
+         </div>
+      </div>
+      <div class="home-gallery_container">
+         <img src="./images/gallery-01.jpg" alt="Gallery Image">
+         <img src="./images/gallery-02.jpg" alt="Gallery Image">
+         <img src="./images/gallery-03.jpg" alt="Gallery Image">
+         <img src="./images/gallery-04.jpg" alt="Gallery Image">
+         <img src="./images/gallery-05.jpg" alt="Gallery Image">
+         <img src="./images/gallery-06.jpg" alt="Gallery Image">
+         <img src="./images/gallery-07.jpg" alt="Gallery Image">
+         <img src="./images/gallery-08.jpg" alt="Gallery Image">
+         <img src="./images/gallery-09.jpg" alt="Gallery Image">
+      </div>
+   </section>
+
+   <section class="home-chef">
+      <div class="container home-chef_container">
+         <div class="home-chef_image">
+            <img src="./images/chef-01.jpg" alt="The Chef">
+         </div>
+         <div class="home-chef_description">
+            <span>our masterchef</span>
+            <h3>Lis Stark</h3>
+            <p>In the past, I have made no secret of my disdain for Chef Gusteau’s famous motto: Anyone can cook. But I
+               realize, only now do I truly understand what he meant.</p>
+            <p>Not everyone can become a great artist, but a great artist can come from anywhere. It is difficult to
+               imagine more humble origins than those of the genius now cooking at Gusteau’s, who is, in this critic’s
+               opinion, nothing less than the finest chef in France.
+            </p>
+            <img src="./images/chef-sign.png" alt="Chef Sign">
+         </div>
+      </div>
+   </section>
+
+   <section class="section home-blog">
+      <div class="container section-container">
+         <div class="section-description">
+            <h1 class="section-description_title">From our blog</h1>
+            <p class="section-description_paragraph">All the stuff you need and none that you don’t, makes this a must
+               have app.</p>
+         </div>
+         <div class="home-blog_posts">
+            <div class="home-blog_post">
+               <img src="./images/blog-01.jpg" alt="Food">
+               <div class="post-details">
+                  <span>news, tech</span>
+                  <h2>By 2030, every person in the planet will have a smartphone</h2>
+                  <p><i class="fa-regular fa-clock"></i>August 1, 2018</p>
+               </div>
+            </div>
+            <div class="home-blog_post">
+               <img src="./images/blog-02.jpg" alt="Food">
+               <div class="post-details">
+                  <span>lifestyle, travel</span>
+                  <h2>Four places you need to visit if you are nature lover</h2>
+                  <p><i class="fa-regular fa-clock"></i>August 1, 2018</p>
+               </div>
+            </div>
+            <div class="home-blog_post">
+               <img src="./images/blog-03.jpg" alt="Food">
+               <div class="post-details">
+                  <span>misc, tips</span>
+                  <h2>Why you should hire a lawyer to prepare your privacy policy</h2>
+                  <p><i class="fa-regular fa-clock"></i>August 1, 2018</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <article class="home-contact">
+      <div class="container home-contact_container">
+         <div class="contact-item">
+            <img src="./images/mail.svg" alt="Mailto">
+            <div class="contact-details">
+               <p>Mail Us</p>
+               <a href="mailto:help@restaurant.com.br">help@restaurant.com.br</a>
+            </div>
+         </div>
+         <div class="contact-item">
+            <img src="./images/phone.svg" alt="Phone">
+            <div class="contact-details">
+               <p>Call Us</p>
+               <a href="tel:+1800-123-4567">+1800-123-4567</a>
+            </div>
+         </div>
+         <div class="contact-item">
+            <img src="./images/position.svg" alt="Position">
+            <div class="contact-details">
+               <p>Visit Us</p>
+               <address>#21 Collins Street, Melbourne CBD</address>
+            </div>
+         </div>
+      </div>
+   </article>
+
+   <footer class="footer">
+
+   </footer>
+   <!--
+         <footer>
+         Icon by <a href="https://freeicons.io/profile/730">Anu Rocks</a> on <a href="https://freeicons.io">freeicons.io</a>                      
+         Icon by <a href="https://freeicons.io/profile/730">Anu Rocks</a> on <a href="https://freeicons.io">freeicons.io</a>
+         Icon by <a href="https://freeicons.io/profile/5790">ColourCreatype</a> on <a href="https://freeicons.io">freeicons.io</a>
+         </footer>
+      -->
    <script src="./js/script.js"></script>
+   <script src="https://kit.fontawesome.com/09fa9cee0a.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

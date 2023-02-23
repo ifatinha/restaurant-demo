@@ -1,0 +1,12 @@
+%default-button {
+   border-radius : 3px;
+   font-weight   : 600;
+   letter-spacing: 1px;
+   padding       : 15px 40px;
+   text-transform: uppercase;
+   text-align    : center;
+   transition    : .3s all ease-in-out;
+
+   @include typography-03(13);
+   @include display(inline-block);
+}
