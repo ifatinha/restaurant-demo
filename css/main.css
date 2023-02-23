@@ -244,8 +244,15 @@ background: linear-gradient(45deg, rgba(48,43,40,1) 0%, rgba(37,34,33,1) 100%);
 
 .main-section {
   align-items: center;
+<<<<<<< HEAD
+  background: url("./../../images/home-bg.jpg") no-repeat center;
+  background-size: cover;
+  min-height: 90%;
+  padding: 0 4%;
+=======
   min-height: 110%;
   padding: 0 2%;
+>>>>>>> 018815cbfd8502eb2c3e496e9244317b4a4318bb
   width: 100%;
   display: flex;
 }
