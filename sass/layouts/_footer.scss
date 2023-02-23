@@ -1,0 +1,39 @@
+.footer {
+   width: 100%;
+}
+
+.footer-container {
+   align-items: center;
+   height     : 500px;
+   padding    : 60px 2%;
+   width      : 100%;
+   @include display(flex);
+   @include section-bg("./../images/footer-bg.jpg");
+
+   @include devices(m) {
+      justify-content: center;
+   }
+}
+
+.footer-bg {
+   max-width: 500px;
+
+   h2 {
+      color         : $second-color;
+      font-weight   : 300;
+      letter-spacing: -0.44px;
+      margin-bottom : 40px;
+      @include typography-01(36);
+   }
+
+   &_images {
+      img:first-of-type {
+         margin-right: 40px;
+      }
+   }
+}
+
+.footer-copyright {
+   background-color: rgba(57, 64, 70, 1);
+   padding         : 20px 2%;
+}

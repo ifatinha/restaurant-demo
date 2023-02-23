@@ -340,6 +340,48 @@ background: linear-gradient(45deg, rgba(48,43,40,1) 0%, rgba(37,34,33,1) 100%);
   line-height: 1.75rem;
 }
 
+.footer {
+  width: 100%;
+}
+
+.footer-container {
+  align-items: center;
+  height: 500px;
+  padding: 60px 2%;
+  width: 100%;
+  display: flex;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 100%), url("./../images/footer-bg.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 767px) {
+  .footer-container {
+    justify-content: center;
+  }
+}
+
+.footer-bg {
+  max-width: 500px;
+}
+.footer-bg h2 {
+  color: #ffffff;
+  font-weight: 300;
+  letter-spacing: -0.44px;
+  margin-bottom: 40px;
+  font-family: "Hind", sans-serif, sans-serif;
+  font-size: 2.25rem;
+  line-height: 3.125rem;
+}
+.footer-bg_images img:first-of-type {
+  margin-right: 40px;
+}
+
+.footer-copyright {
+  background-color: rgb(57, 64, 70);
+  padding: 20px 2%;
+}
+
 .home {
   background: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 100%), url("./../images/home-bg.jpg");
   background-position: center;
