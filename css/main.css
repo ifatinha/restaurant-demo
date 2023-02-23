@@ -738,6 +738,79 @@ background: linear-gradient(45deg, rgba(48,43,40,1) 0%, rgba(37,34,33,1) 100%);
   background-size: cover;
 }
 
+.about-description {
+  padding: 120px 2% 0;
+}
+.about-description_container {
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  display: grid;
+}
+@media screen and (max-width: 767px) {
+  .about-description_container {
+    grid-template-columns: 1fr;
+  }
+}
+.about-description_title {
+  color: #3e4249;
+  font-weight: 400;
+  letter-spacing: -0.44px;
+  font-family: "Oxygen", sans-serif, sans-serif;
+  font-size: 2.75rem;
+  line-height: 3.625rem;
+}
+.about-description_image img {
+  border-radius: 8px;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+}
+.about-description_history {
+  align-self: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 20px;
+  display: flex;
+}
+.about-description_history span {
+  color: #848991;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Hind", sans-serif, sans-serif;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+}
+@media screen and (min-width: 1024px) {
+  .about-description_history {
+    padding-right: 35px;
+  }
+}
+
+.about-chefs {
+  width: 100%;
+}
+
+.chefs-container {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  display: grid;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .chefs-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 767px) {
+  .chefs-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chefs-card {
+  background-color: darkblue;
+}
+
 .menu {
   background: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 100%), url("./../images/menu-bg.jpg");
   background-position: center;

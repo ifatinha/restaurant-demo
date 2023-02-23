@@ -1,3 +1,77 @@
 .about {
    @include section-bg("./../images/about-bg.jpg");
 }
+
+.about-description {
+   padding: 120px 2% 0;
+
+   &_container {
+      grid-template-columns: 1fr 1fr;
+      gap                  : 35px;
+      @include display(grid);
+
+      @include devices(m) {
+         grid-template-columns: 1fr;
+      }
+   }
+
+   &_title {
+      color         : $primary-color;
+      font-weight   : 400;
+      letter-spacing: -0.44px;
+
+      @include typography-02(44);
+   }
+
+   &_image {
+      img {
+         border-radius: 8px;
+         display      : block;
+         height       : 100%;
+         object-fit   : cover;
+      }
+   }
+
+   &_history {
+      align-self    : center;
+      align-items   : start;
+      flex-direction: column;
+      gap           : 20px;
+
+      @include display(flex);
+
+      span {
+         color         : $theme-texts_color;
+         font-weight   : 600;
+         letter-spacing: 1px;
+         text-transform: uppercase;
+         @include typography-01(12);
+      }
+
+      @include devices(l) {
+         padding-right: 35px;
+      }
+   }
+}
+
+.about-chefs {
+   width: 100%;
+}
+
+.chefs-container {
+   grid-template-columns: repeat(4, 1fr);
+   gap                  : 50px;
+   @include display(grid);
+
+   @include devices(t) {
+      grid-template-columns: 1fr 1fr;
+   }
+
+   @include devices(m) {
+      grid-template-columns: 1fr;
+   }
+}
+
+.chefs-card {
+   background-color: darkblue;
+}
