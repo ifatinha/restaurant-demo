@@ -1,13 +1,13 @@
 .main-section {
    align-items: center;
-   min-height : 110%;
+   min-height : 100%;
    padding    : 0 2%;
    width      : 100%;
 
    @include display(flex);
 
    @include devices(l) {
-      min-height: 90%;
+      min-height: 95%;
    }
 
    @include devices(t) {
@@ -22,8 +22,7 @@
       }
 
       @include devices(m) {
-         padding-top   : 170px;
-         padding-bottom: 60px;
+         padding: 120px 20px 60px;
       }
    }
 

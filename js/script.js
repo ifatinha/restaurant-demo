@@ -2,10 +2,10 @@
 const links = document.querySelectorAll("nav a");
 
 function ativarLink(link) {
-   let href = link.href;
-   let url = location.href;
+   const url = location.href;
+   const href = link.href;
 
-   if (href.includes(url)) {
+   if (url.includes(href)) {
       link.classList.add("linkAtivo");
    }
 }

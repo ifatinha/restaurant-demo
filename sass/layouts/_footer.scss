@@ -35,5 +35,39 @@
 
 .footer-copyright {
    background-color: rgba(57, 64, 70, 1);
-   padding         : 20px 2%;
+   padding         : 30px 2%;
+
+   &_container {
+      align-items   : flex-start;
+      flex-wrap     : wrap;
+      flex-direction: column;
+      gap           : 20px;
+      @include display(flex);
+
+      p {
+         color: $theme-texts_color;
+         @include typography-01(16);
+      }
+
+      @include devices(l) {
+         @include flex-properties(center, space-between);
+         flex-direction: row;
+      }
+   }
+}
+
+.footer-sociais {
+   color: $second-color;
+   gap  : 20px;
+   @include display(flex);
+   @include flex-properties(center, space-between);
+   @include typography-01(16);
+
+   i {
+      transition: transform .3s;
+
+      &:hover {
+         transform: scale(1.5);
+      }
+   }
 }

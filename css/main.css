@@ -168,6 +168,11 @@ background: linear-gradient(45deg, rgba(48,43,40,1) 0%, rgba(37,34,33,1) 100%);
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 767px) {
+  .header-container {
+    padding: 10px 0;
+  }
+}
 
 .nav-desktop {
   flex-wrap: wrap;
@@ -244,21 +249,14 @@ background: linear-gradient(45deg, rgba(48,43,40,1) 0%, rgba(37,34,33,1) 100%);
 
 .main-section {
   align-items: center;
-<<<<<<< HEAD
-  background: url("./../../images/home-bg.jpg") no-repeat center;
-  background-size: cover;
-  min-height: 90%;
-  padding: 0 4%;
-=======
-  min-height: 110%;
+  min-height: 100%;
   padding: 0 2%;
->>>>>>> 018815cbfd8502eb2c3e496e9244317b4a4318bb
   width: 100%;
   display: flex;
 }
 @media screen and (min-width: 1024px) {
   .main-section {
-    min-height: 90%;
+    min-height: 95%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -276,8 +274,7 @@ background: linear-gradient(45deg, rgba(48,43,40,1) 0%, rgba(37,34,33,1) 100%);
 }
 @media screen and (max-width: 767px) {
   .main-section_container {
-    padding-top: 170px;
-    padding-bottom: 60px;
+    padding: 120px 20px 60px;
   }
 }
 .main-section_description {
@@ -386,7 +383,44 @@ background: linear-gradient(45deg, rgba(48,43,40,1) 0%, rgba(37,34,33,1) 100%);
 
 .footer-copyright {
   background-color: rgb(57, 64, 70);
-  padding: 20px 2%;
+  padding: 30px 2%;
+}
+.footer-copyright_container {
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+  display: flex;
+}
+.footer-copyright_container p {
+  color: #848991;
+  font-family: "Hind", sans-serif, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .footer-copyright_container {
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+
+.footer-sociais {
+  color: #ffffff;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Hind", sans-serif, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.footer-sociais i {
+  transition: transform 0.3s;
+}
+.footer-sociais i:hover {
+  transform: scale(1.5);
 }
 
 .home {
@@ -695,6 +729,34 @@ background: linear-gradient(45deg, rgba(48,43,40,1) 0%, rgba(37,34,33,1) 100%);
 .contact-details a,
 .contact-details address {
   color: #848991;
+}
+
+.about {
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 100%), url("./../images/about-bg.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.menu {
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 100%), url("./../images/menu-bg.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.contact {
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 100%), url("./../images/contact-bg.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.blog {
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 100%), url("./../images/blog-bg.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=main.css.map */
