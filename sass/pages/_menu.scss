@@ -1,4 +1,129 @@
 .menu {
-   padding: 80px 2%;
+   width: 100%;
    @include section-bg("./../images/menu-bg.jpg");
+
+   &-section {
+      flex-direction: column;
+      gap           : 20px;
+      min-height    : 100%;
+      padding       : 80px 2%;
+      @include display(flex);
+
+      &_title {
+         span {
+            align-items   : center;
+            color         : $theme-texts_color;
+            font-weight   : 600;
+            gap           : 10px;
+            margin-bottom : 20px;
+            text-transform: uppercase;
+            @include typography-03(13);
+            @include display(flex);
+
+            i {
+               font-size: 22px;
+            }
+         }
+
+         h2 {
+            color         : $primary-color;
+            font-weight   : 300;
+            letter-spacing: -0.44px;
+            @include typography-01(44);
+         }
+      }
+
+      &_dishes {
+         grid-template-columns: 1fr 1fr;
+         gap                  : 25px;
+         margin-top           : 40px;
+
+         @include display(grid);
+
+         @include devices(m) {
+            grid-template-columns: 1fr;
+            gap                  : 0;
+         }
+      }
+
+      &_dishes-list {
+         padding: 0 10px;
+
+         .dish-item {
+            align-items  : start;
+            margin-bottom: 40px;
+            @include display(flex);
+
+            &_image {
+               box-shadow  : 0px 0px 0px 0px rgb(0 0 0 / 0%);
+               height      : 86px;
+               margin-right: 24px;
+               width       : 86px;
+               flex-shrink : 0;
+
+               img {
+                  border-radius: 50%;
+               }
+            }
+
+            &_details {
+               flex: 0 1 300px;
+
+               h2 {
+                  @include typography-01(18);
+                  @include font-styles($theme-subtitle_color, 600, -0.18);
+               }
+
+               p {
+                  color: $theme-texts_color;
+                  @include typography-03(17);
+               }
+            }
+
+            &_price {
+               flex      : 1 1 auto;
+               text-align: right;
+
+               span {
+                  @include typography-01(18);
+                  @include font-styles($theme-subtitle_color, 600, -0.18);
+               }
+            }
+         }
+      }
+   }
+}
+
+.menu-lunch {
+   background-color: $theme-section_bg-color;
+}
+
+.menu-dinner {
+   background: linear-gradient(45deg, rgba(48, 43, 40, 1) 0%, rgba(37, 34, 33, 1) 100%);
+
+   .menu-section_title {
+      h2 {
+         color: $second-color;
+      }
+   }
+
+   .menu-section_dishes-list {
+      .dish-item {
+         &_details {
+            h2 {
+               color: $second-color;
+            }
+
+            p {
+               color: $white-opacity;
+            }
+         }
+
+         &_price {
+            span {
+               color: $second-color;
+            }
+         }
+      }
+   }
 }
