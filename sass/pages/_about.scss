@@ -56,22 +56,250 @@
 
 .about-chefs {
    width: 100%;
-}
 
-.chefs-container {
-   grid-template-columns: repeat(4, 1fr);
-   gap                  : 50px;
-   @include display(grid);
+   &_container {
+      grid-template-columns: repeat(4, 1fr);
+      gap                  : 50px;
+      @include display(grid);
 
-   @include devices(t) {
-      grid-template-columns: 1fr 1fr;
+      @include devices(t) {
+         grid-template-columns: 1fr 1fr;
+      }
+
+      @include devices(m) {
+         grid-template-columns: 1fr;
+      }
    }
 
-   @include devices(m) {
-      grid-template-columns: 1fr;
+   &_card {
+      height: 100%;
+      width : 100%;
+
+      &:hover .card-overlay {
+         opacity: 1;
+      }
+
+      .chefs-card_description {
+         text-align: center;
+
+         h2 {
+            color         : $theme-subtitle_color;
+            font-weight   : 600;
+            letter-spacing: -0.18px;
+            margin-bottom : 10px;
+
+            @include typography-02(17);
+
+         }
+
+         p {
+            color         : $theme-texts_color;
+            font-weight   : 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            @include typography-01(12);
+         }
+      }
+
+      .chefs-card_image {
+         margin-bottom: 20px;
+         position     : relative;
+
+         img {
+            display: block;
+         }
+      }
+
+      .card-overlay {
+         background: rgba(33, 33, 33, 1);
+         bottom    : 0;
+         opacity   : 0;
+         padding   : 14px 0;
+         position  : absolute;
+         top       : auto;
+         height    : auto;
+         transition: all .6s;
+         width     : 100%;
+
+         &_list {
+            align-items    : center;
+            display        : flex;
+            gap            : 20px;
+            justify-content: center;
+
+            a {
+               color     : $second-color;
+               transition: all .3s;
+
+               @include typography-01(14);
+            }
+         }
+      }
    }
 }
 
-.chefs-card {
-   background-color: darkblue;
+.about-comment {
+   background-color: $theme-section_bg-color;
+
+   &_container {
+      text-align: center;
+   }
+
+   &_title {
+      color         : $theme-subtitle_color;
+      font-weight   : 600;
+      letter-spacing: 1px;
+      margin-bottom : 30px;
+      text-transform: uppercase;
+      @include typography-01(14);
+   }
+
+   &_quot {
+      height       : 40px;
+      margin-bottom: 30px;
+      width        : 40px;
+   }
+
+   &_description {
+      color        : $theme-texts_color;
+      max-width    : 680px;
+      margin-bottom: 30px;
+      width        : 100%;
+
+      @include typography-02(22);
+   }
+
+   &_image {
+      border-radius: 50%;
+      height       : 70px;
+      margin-bottom: 10px;
+      width        : 70px;
+   }
+
+   &_author {
+      color         : $theme-subtitle_color;
+      font-weight   : 600;
+      letter-spacing: -0.128px;
+      margin-bottom : 5px;
+      @include typography-01(16);
+   }
+
+   &_job {
+      color        : $theme-texts_color;
+      font-weight  : 600;
+      margin-bottom: 20px;
+      @include typography-03(13);
+   }
+
+   &_buttons {
+      gap       : 5px;
+      text-align: center;
+      @include display(flex);
+      @include flex-properties(center, center);
+   }
+
+   .circle {
+      background-color: $theme-texts_color;
+      border-radius   : 50%;
+      cursor          : pointer;
+      height          : 8px;
+      width           : 8px;
+
+      &:first-of-type {
+         background-color: $black;
+      }
+   }
+}
+
+.about-gallery {
+   p {
+      max-width : 450px;
+      text-align: center;
+   }
+
+   &_container {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap                  : 40px;
+      margin-top           : 50px;
+      @include display(grid);
+
+      @include devices(t) {
+         grid-template-columns: 1fr 1fr;
+      }
+
+      @include devices(m) {
+         grid-template-columns: 1fr;
+      }
+   }
+
+   &_image {
+      cursor  : pointer;
+      height  : 100%;
+      position: relative;
+      width   : 100%;
+
+      img {
+         display: block;
+      }
+
+      &:hover .about-gallery_overllay {
+         opacity: 1;
+      }
+   }
+
+   &_overllay {
+      background-color: rgba(33, 33, 33, 0.5);
+      height          : 100%;
+      left            : 0;
+      opacity         : 0;
+      position        : absolute;
+      top             : 0;
+      transition      : all .3s ease-in-out;
+      width           : 100%;
+
+      i {
+         color   : $white-opacity;
+         position: absolute;
+         right   : 10px;
+         top     : 10px;
+      }
+   }
+}
+
+.about-faqs {
+   padding-top: 0px;
+
+   .section-description_paragraph {
+      max-width: 450px;
+   }
+}
+
+.about-reserve {
+   align-items: center;
+   height     : 100%;
+   width      : 100%;
+   @include section-bg("./../images/reserve-bg.jpg");
+   @include display(flex);
+
+   &_description {
+      padding: 0 2%;
+
+      @include devices(m) {
+         text-align: center;
+      }
+
+      h2 {
+         color         : $second-color;
+         font-weight   : 300;
+         letter-spacing: -0.48px;
+         max-width     : 320px;
+         margin-bottom : 20px;
+         width         : 100%;
+         @include typography-01(60);
+
+         @include devices(m) {
+            margin: 0 auto;
+         }
+      }
+   }
 }

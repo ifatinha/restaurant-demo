@@ -423,6 +423,59 @@ background: linear-gradient(45deg, rgba(48,43,40,1) 0%, rgba(37,34,33,1) 100%);
   transform: scale(1.5);
 }
 
+.faqs-questions {
+  width: 100%;
+}
+.faqs-questions > div {
+  border-bottom: 1px solid #cacaca;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+.faqs-questions button {
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: #4a4f54;
+  cursor: pointer;
+  font-weight: 600;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  letter-spacing: -0.18px;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  display: grid;
+  font-family: "Hind", sans-serif, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+}
+.faqs-questions button::after {
+  align-self: center;
+  background: url("./../../images/seta-abrir.svg");
+  content: "";
+  display: inline-block;
+  height: 6px;
+  position: absolute;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+  width: 14px;
+}
+.faqs-questions button:hover::after, .faqs-questions button[aria-expanded=true]::after {
+  transform: rotate(180deg);
+}
+.faqs-questions dd {
+  color: #848991;
+  display: none;
+  padding: 10px 5px;
+  font-family: "Ubuntu", sans-serif, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.75rem;
+}
+.faqs-questions dd.ativa {
+  display: block;
+}
+
 .home {
   background: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 100%), url("./../images/home-bg.jpg");
   background-position: center;
@@ -790,28 +843,245 @@ background: linear-gradient(45deg, rgba(48,43,40,1) 0%, rgba(37,34,33,1) 100%);
 .about-chefs {
   width: 100%;
 }
-
-.chefs-container {
+.about-chefs_container {
   grid-template-columns: repeat(4, 1fr);
   gap: 50px;
   display: grid;
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .chefs-container {
+  .about-chefs_container {
     grid-template-columns: 1fr 1fr;
   }
 }
 @media screen and (max-width: 767px) {
-  .chefs-container {
+  .about-chefs_container {
     grid-template-columns: 1fr;
   }
 }
+.about-chefs_card {
+  height: 100%;
+  width: 100%;
+}
+.about-chefs_card:hover .card-overlay {
+  opacity: 1;
+}
+.about-chefs_card .chefs-card_description {
+  text-align: center;
+}
+.about-chefs_card .chefs-card_description h2 {
+  color: #4a4f54;
+  font-weight: 600;
+  letter-spacing: -0.18px;
+  margin-bottom: 10px;
+  font-family: "Oxygen", sans-serif, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.75rem;
+}
+.about-chefs_card .chefs-card_description p {
+  color: #848991;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Hind", sans-serif, sans-serif;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+}
+.about-chefs_card .chefs-card_image {
+  margin-bottom: 20px;
+  position: relative;
+}
+.about-chefs_card .chefs-card_image img {
+  display: block;
+}
+.about-chefs_card .card-overlay {
+  background: rgb(33, 33, 33);
+  bottom: 0;
+  opacity: 0;
+  padding: 14px 0;
+  position: absolute;
+  top: auto;
+  height: auto;
+  transition: all 0.6s;
+  width: 100%;
+}
+.about-chefs_card .card-overlay_list {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.about-chefs_card .card-overlay_list a {
+  color: #ffffff;
+  transition: all 0.3s;
+  font-family: "Hind", sans-serif, sans-serif;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+}
 
-.chefs-card {
-  background-color: darkblue;
+.about-comment {
+  background-color: rgb(250, 250, 250);
+}
+.about-comment_container {
+  text-align: center;
+}
+.about-comment_title {
+  color: #4a4f54;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-family: "Hind", sans-serif, sans-serif;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+}
+.about-comment_quot {
+  height: 40px;
+  margin-bottom: 30px;
+  width: 40px;
+}
+.about-comment_description {
+  color: #848991;
+  max-width: 680px;
+  margin-bottom: 30px;
+  width: 100%;
+  font-family: "Oxygen", sans-serif, sans-serif;
+  font-size: 1.375rem;
+  line-height: 2.5rem;
+}
+.about-comment_image {
+  border-radius: 50%;
+  height: 70px;
+  margin-bottom: 10px;
+  width: 70px;
+}
+.about-comment_author {
+  color: #4a4f54;
+  font-weight: 600;
+  letter-spacing: -0.128px;
+  margin-bottom: 5px;
+  font-family: "Hind", sans-serif, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.about-comment_job {
+  color: #848991;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-family: "Ubuntu", sans-serif, sans-serif;
+  font-size: 0.8125rem;
+  line-height: 0.8125rem;
+}
+.about-comment_buttons {
+  gap: 5px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-comment .circle {
+  background-color: #848991;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+}
+.about-comment .circle:first-of-type {
+  background-color: #000000;
+}
+
+.about-gallery p {
+  max-width: 450px;
+  text-align: center;
+}
+.about-gallery_container {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-top: 50px;
+  display: grid;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .about-gallery_container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about-gallery_container {
+    grid-template-columns: 1fr;
+  }
+}
+.about-gallery_image {
+  cursor: pointer;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+.about-gallery_image img {
+  display: block;
+}
+.about-gallery_image:hover .about-gallery_overllay {
+  opacity: 1;
+}
+.about-gallery_overllay {
+  background-color: rgba(33, 33, 33, 0.5);
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+.about-gallery_overllay i {
+  color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.about-faqs {
+  padding-top: 0px;
+}
+.about-faqs .section-description_paragraph {
+  max-width: 450px;
+}
+
+.about-reserve {
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 100%), url("./../images/reserve-bg.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  display: flex;
+}
+.about-reserve_description {
+  padding: 0 2%;
+}
+@media screen and (max-width: 767px) {
+  .about-reserve_description {
+    text-align: center;
+  }
+}
+.about-reserve_description h2 {
+  color: #ffffff;
+  font-weight: 300;
+  letter-spacing: -0.48px;
+  max-width: 320px;
+  margin-bottom: 20px;
+  width: 100%;
+  font-family: "Hind", sans-serif, sans-serif;
+  font-size: 3.75rem;
+  line-height: 4.6875rem;
+}
+@media screen and (max-width: 767px) {
+  .about-reserve_description h2 {
+    margin: 0 auto;
+  }
 }
 
 .menu {
+  padding: 80px 2%;
   background: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 100%), url("./../images/menu-bg.jpg");
   background-position: center;
   background-repeat: repeat;

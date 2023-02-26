@@ -61,6 +61,11 @@ sans-serif;
       line-height: rem(32);
    }
 
+   @else if($size==22) {
+      font-size  : rem(22);
+      line-height: rem(40);
+   }
+
    @else if($size==44) {
       font-size  : rem(44);
       line-height: rem(58);
