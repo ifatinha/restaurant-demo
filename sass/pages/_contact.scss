@@ -1,3 +1,134 @@
 .contact {
    @include section-bg("./../images/contact-bg.jpg");
 }
+
+.contact-info {
+
+   &_container {
+      grid-template-columns: 1fr;
+      padding              : 80px 4%;
+      width                : 100%;
+      @include display(grid);
+
+      @include devices(l) {
+         grid-template-columns: 2fr 1fr;
+      }
+   }
+}
+
+.contact-form {
+   &_title {
+      margin-bottom: 30px;
+
+      h2 {
+         @include typography-01(36);
+         @include font-styles($primary-color, 300, -0.288px);
+      }
+
+      p {
+         color: $theme-texts_color;
+         @include typography-03(17);
+
+         a {
+            color   : $theme-blog_texts-color;
+            position: relative;
+
+            &::after {
+               background-color: $theme-blog_texts-color;
+               content         : "";
+               height          : 1px;
+               display         : inline-block;
+               display         : flex;
+               flex-direction  : column;
+               left            : 0;
+               position        : absolute;
+               transition      : all .3s ease-in-out;
+               width           : 0;
+            }
+
+            &:hover::after {
+               width: 100%;
+            }
+         }
+      }
+   }
+
+   &_elements {
+      gap                  : 30px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas  :
+         "nome email"
+         "phone tableSize"
+         "day time"
+         "note note"
+         "button button";
+      @include display(grid);
+
+      @include devices(m) {
+         grid-template-columns: 1fr;
+         grid-template-areas  :
+            "nome"
+            "email"
+            "phone"
+            "tableSize"
+            "day"
+            "time"
+            "note"
+            "button";
+      }
+
+      &-item {
+
+         input,
+         textarea {
+            border-radius: 3px;
+            border       : 3px solid transparent;
+            color        : $theme-texts_color;
+            display      : inline-block;
+            outline      : none;
+            padding      : 15px;
+            transition   : all 0.3s ease-in-out;
+            width        : 100%;
+
+            @include typography-01(16);
+            @include prefix(box-shadow, inset 0 0 4px 0 rgb(0 0 0 / 15%));
+
+            &:hover {
+               border-bottom: red;
+            }
+         }
+      }
+
+      &-item:nth-child(1) {
+         grid-area: nome;
+      }
+
+      &-item:nth-child(2) {
+         grid-area: email;
+      }
+
+      &-item:nth-child(3) {
+         grid-area: phone;
+      }
+
+      &-item:nth-child(4) {
+         grid-area: tableSize;
+      }
+
+      &-item:nth-child(5) {
+         grid-area: day;
+      }
+
+      &-item:nth-child(6) {
+         grid-area: time;
+      }
+
+      &-item:nth-child(7) {
+         grid-area: note;
+      }
+
+      &-item:nth-child(8) {
+         grid-area: button;
+      }
+   }
+}
