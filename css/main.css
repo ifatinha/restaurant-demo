@@ -149,6 +149,29 @@ th {
 .btn-icon {
   margin-right: 6px;
 }
+.btn-posts {
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #848991;
+  display: inline-block;
+  height: 35px;
+  padding: 6px 15px;
+  text-align: center;
+  transition: all 0.5s;
+  width: 40px;
+  font-family: "Hind", sans-serif, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.btn-posts_black {
+  background-color: #212121;
+  color: #ffffff;
+  -webkit-box-shadow: #212121 0px 7px 14px -6px;
+  -moz-box-shadow: #212121 0px 7px 14px -6px;
+  -ms-box-shadow: #212121 0px 7px 14px -6px;
+  -o-box-shadow: #212121 0px 7px 14px -6px;
+  box-shadow: #212121 0px 7px 14px -6px;
+}
 
 .header {
   background-color: rgba(0, 0, 0, 0.4);
@@ -1202,6 +1225,7 @@ th {
 
 .contact-info_container {
   grid-template-columns: 1fr;
+  gap: 40px;
   padding: 80px 4%;
   width: 100%;
   display: grid;
@@ -1236,8 +1260,8 @@ th {
 .contact-form_title p a::after {
   background-color: #313233;
   content: "";
-  height: 1px;
-  display: inline-block;
+  height: 2px;
+  display: block;
   display: flex;
   flex-direction: column;
   left: 0;
@@ -1260,15 +1284,18 @@ th {
     grid-template-areas: "nome" "email" "phone" "tableSize" "day" "time" "note" "button";
   }
 }
+.contact-form_elements-item {
+  position: relative;
+  width: 100%;
+}
 .contact-form_elements-item input,
 .contact-form_elements-item textarea {
   border-radius: 3px;
-  border: 3px solid transparent;
+  border: 0;
   color: #848991;
-  display: inline-block;
+  display: block;
   outline: none;
   padding: 15px;
-  transition: all 0.3s ease-in-out;
   width: 100%;
   font-family: "Hind", sans-serif, sans-serif;
   font-size: 1rem;
@@ -1279,9 +1306,19 @@ th {
   -o-box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.15);
 }
-.contact-form_elements-item input:hover,
-.contact-form_elements-item textarea:hover {
-  border-bottom: red;
+.contact-form_elements-item input:focus ~ .input-border,
+.contact-form_elements-item textarea:focus ~ .input-border {
+  transform: scaleX(1);
+}
+.contact-form_elements-item .input-border {
+  border-bottom: 3px solid #000000;
+  bottom: 0;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transition: all 0.5s ease;
+  width: 100%;
 }
 .contact-form_elements-item:nth-child(1) {
   grid-area: nome;
@@ -1308,11 +1345,118 @@ th {
   grid-area: button;
 }
 
+.contact-info_details {
+  flex-direction: column;
+  gap: 30px;
+  display: flex;
+}
+.contact-info_details-item {
+  display: flex;
+  gap: 10px;
+}
+.contact-info_details-item img {
+  height: 34px;
+  width: 34px;
+}
+.contact-info_details-item h3 {
+  color: #4a4f54;
+  font-weight: 600;
+  letter-spacing: -0.128px;
+  margin-bottom: 5px;
+  font-family: "Hind", sans-serif, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.contact-info_details-item a,
+.contact-info_details-item address,
+.contact-info_details-item p {
+  color: #848991;
+  font-family: "Ubuntu", sans-serif, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.75rem;
+}
+
+.contact-map {
+  margin-bottom: -8px;
+  width: 100%;
+}
+.contact-map iframe {
+  width: 100%;
+}
+
 .blog {
   background: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0) 100%), url("./../images/blog-bg.jpg");
   background-position: center;
   background-repeat: repeat;
   background-size: cover;
+}
+
+.blog-posts {
+  padding: 120px 2%;
+}
+
+.blog-posts_container {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 44px;
+  margin-bottom: 60px;
+  display: grid;
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .blog-posts_container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 767px) {
+  .blog-posts_container {
+    grid-template-columns: 1fr;
+  }
+}
+.blog-posts_container-item {
+  cursor: pointer;
+}
+.blog-posts_container-item img {
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.blog-posts_container-item span {
+  color: #848991;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-family: "Hind", sans-serif, sans-serif;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+}
+.blog-posts_container-item h3 {
+  color: #3e4249;
+  margin-bottom: 10px;
+  font-family: "Oxygen", sans-serif, sans-serif;
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+.blog-posts_container-item p {
+  color: #848991;
+  font-weight: 500;
+  gap: 10px;
+  display: flex;
+  font-family: "Ubuntu", sans-serif, sans-serif;
+  font-size: 0.8125rem;
+  line-height: 0.8125rem;
+}
+
+.blog-posts_buttons {
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+.blog-posts_buttons a:not(.blog-posts_buttons a:nth-child(1)):hover {
+  background-color: #f2f2f2;
+}
+.blog-posts_buttons a:nth-child(3):hover i {
+  margin-left: 5px;
+}
+.blog-posts_buttons a i {
+  font-size: 12px;
+  transition: all 0.3s ease-in-out;
 }
 
 /*# sourceMappingURL=main.css.map */

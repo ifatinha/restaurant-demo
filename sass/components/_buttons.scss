@@ -34,4 +34,23 @@
    &-icon {
       margin-right: 6px;
    }
+
+   &-posts {
+      border-radius: 3px;
+      border       : 1px solid rgba(0, 0, 0, .1);
+      color        : $theme-texts_color;
+      display      : inline-block;
+      height       : 35px;
+      padding      : 6px 15px;
+      text-align   : center;
+      transition   : all .5s;
+      width        : 40px;
+      @include typography-01(16);
+   }
+
+   &-posts_black {
+      background-color: #212121;
+      color           : $second-color;
+      @include prefix(box-shadow, #212121 0px 7px 14px -6px);
+   }
 }
