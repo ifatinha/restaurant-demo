@@ -259,10 +259,18 @@
    background-color: $theme-section_bg-color;
 
    &_posts {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr;
       gap                  : 40px;
       overflow             : hidden;
       @include display(grid);
+
+      @include devices(t) {
+         grid-template-columns: 1fr 1fr;
+      }
+
+      @include devices(l) {
+         grid-template-columns: 1fr 1fr 1fr;
+      }
    }
 }
 
